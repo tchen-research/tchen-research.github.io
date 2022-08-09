@@ -1,0 +1,54 @@
+---
+title:  Research
+keywords: ['applied','math']
+description: I'm Tyler Chen! This page contains some basic information about my reserach.
+...
+
+The less time scientists have to wait for code to run, the more time they can spend thinking about the problems they are tackling.
+My research aims to develop methods to support the scientists taking on the problems of today.
+
+I'm interested in incorporating probabilistic techniques into classical algorithms to develop methods which are fast and reliable, both in theory and in practice.
+Right now, I work in the field of numerical linear algebra on Krylov subspace methods such as the [conjugate gradient](./cg) and Lanczos methods.
+I hope that my work will help to bridge the gap between numerical analysis, theoretical computer science, and applied computational sciences such as quantum physics.
+
+I am committed to making my research accessible and to facilitating the reproducibility/replicability of my work. 
+Code to generate the figures from my papers can be found on [Github](https://github.com/chentyl).
+Please feel free to contact me with any questions or concerns about my research.
+
+In the fall I will be starting as a Courant Instructor, sponsored by [Chris Musco](chrismusco.com/).
+
+
+
+
+## Collaboration
+
+I'm always interested in finding things to collaborate on (and people to collaborate with).
+
+If you're an undergrad student interested in research or grad school, please feel free to reach out; I'd be happy to try to help you find something to work on! 
+
+## Thesis
+
+**Lanczos based methods for matrix functions** (coming soon!)
+
+I was advised by [Anne Greenbaum](https://faculty.washington.edu/greenbau/) and [Tom Trogdon](https://faculty.washington.edu/trogdon/).
+
+
+## Publications
+
+More information can be found in my [CV](../cv.pdf).
+In general, I've tried to include brief descriptions of all my papers which are readable by a broader audience interested in learning about or keeping up with recent advancements in the field.
+
+[pub:minibatch_HBM]
+[pub:reduced_density]
+[pub:matrix_free_quadrature]
+[pub:lowmem_rational_opt]
+[pub:lanczos_function_CIF]
+[pub:cg_variants_convergence_rates]
+[pub:slq_analysis]
+[pub:rounded_random_variables]
+[pub:predict_and_recompute_cg]
+
+Here are links to my [Google Scholar profile](https://scholar.google.com/citations?hl=en&user=FD4TjnYAAAAJ) and [ORCID](https://orcid.org/0000-0002-1187-1026): 0000-0002-1187-1026.
+
+
+
