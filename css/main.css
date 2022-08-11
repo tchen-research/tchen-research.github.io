@@ -117,14 +117,14 @@ sup, sub {
 
 .pub-idx {
     width: 10%;
-    width: calc(1.3em);
+    width: calc(2em);
     display: inline-block;
     vertical-align: top;
 }
 
 .pub-container {
     width: 90%;
-    width: calc(100% - 1.3em);
+    width: calc(100% - 2em);
     display: inline-block;
 }
 
@@ -132,7 +132,7 @@ sup, sub {
     padding: 0;
 }
 
-.title,.authors,.journal,.eprint,.pdf,.doi,.links,.intro,.notes {
+.title,.authors,.journal,.eprint,.pdf,.doi,.url,.links,.intro,.notes {
     display: inline;
 }
 
