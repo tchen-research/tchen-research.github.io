@@ -4,20 +4,23 @@ keywords: ['applied','math']
 description: I'm Tyler Chen! This page contains some basic information about my reserach.
 ...
 
-I am current a Courant Instructor, sponsored by [Chris Musco](chrismusco.com/).
+I am a Courant Instructor at New York University, sponsored by [Christopher Musco](chrismusco.com/).
+I have a joint appoinment with [Mathematics](https://math.nyu.edu/dynamic/) at Courant and [Computer Science and Engineering](https://engineering.nyu.edu/academics/departments/computer-science-and-engineering) at Tandon.
 
-My research aims to develop methods to support the scientists taking on the problems of today.
 
-I'm interested in incorporating probabilistic techniques into classical algorithms to develop methods which are fast and reliable, both in theory and in practice.
+Broadly, my research aims to develop methods to support the scientists taking on the problems of today.
+
+I'm particularly interested in incorporating probabilistic techniques into classical algorithms to develop methods which are fast and reliable, both in theory and in practice.
 Right now, I work mainly in the field of numerical linear algebra on Krylov subspace methods such as the conjugate gradient and Lanczos methods.
 I hope that my work will help to bridge the gap between numerical analysis, theoretical computer science, and applied computational sciences such as quantum physics.
+
 
 I am committed to making my research accessible and to facilitating the reproducibility/replicability of my work. 
 Code to generate the figures from my papers can be found on [Github](https://github.com/chentyl).
 Please feel free to contact me with any questions or concerns about my research.
 
 
-More information can be found in my [CV](./cv.pdf).
+More information can be found in my [curriculum vitae (cv)](./cv.pdf).
 
 
 ## Collaboration
@@ -29,9 +32,13 @@ If you're an undergrad student in the NYC area interested in research or grad sc
 
 ## Thesis
 
-**Lanczos based methods for matrix functions** (coming soon!)
+I did my PhD in the [Department of Applied Mathematics](amath.washington.edu/) at the University of Washington where I was advised by [Anne Greenbaum](https://faculty.washington.edu/greenbau/) and [Tom Trogdon](https://faculty.washington.edu/trogdon/).
 
-I was advised by [Anne Greenbaum](https://faculty.washington.edu/greenbau/) and [Tom Trogdon](https://faculty.washington.edu/trogdon/).
+**Lanczos based methods for matrix functions**   
+[[PDF]](./thesis.pdf) 
+[[source]](https://github.com/tchen-research/thesis)
+[[commentary on design]](./design.pdf) 
+
 
 
 
