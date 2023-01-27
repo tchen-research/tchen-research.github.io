@@ -27,7 +27,7 @@ More information can be found in my [curriculum vitae (cv)](./cv.pdf).
 
 I'm always interested in finding things to collaborate on (and people to collaborate with).
 
-If you're an undergrad student in the NYC area interested in research or grad school, please feel free to reach out; I'd be happy to try to help you find something to work on! 
+If you're an undergrad student in the NYC area interested in research or grad school, please feel free to reach out. 
 
 
 ## Thesis
@@ -44,13 +44,15 @@ I did my PhD in the [Department of Applied Mathematics](amath.washington.edu/) a
 
 ## In submission
 
+[ipub:xu_chen_22]
 [ipub:bollapragada_chen_ward_22]
 [ipub:chen_hallman_22]
 [ipub:chen_trogdon_ubaru_22]
-[ipub:chen_greenbaum_musco_musco_22b]
+
 
 ## Publications
 
+[pub:chen_greenbaum_musco_musco_23]
 [pub:chen_cheng_22]
 [pub:chen_greenbaum_musco_musco_22]
 [pub:chen_trogdon_ubaru_21]
@@ -62,6 +64,8 @@ Here are links to my [Google Scholar profile](https://scholar.google.com/citatio
 
 ## Talks
 
+[talk:chen_hallman_trogdon_ubaru_NASC22]
+[talk:chen_trogdon_greenbaum_RMTNLA22]
 [talk:chen_trogdon_greenbaum_RMTNLA22]
 [talk:chen_trogdon_ubaru_WALDO21]
 [talk:chen_trogdon_ubaru_ICML21]

@@ -132,8 +132,10 @@ sup, sub {
     padding: 0;
 }
 
-.title,.authors,.journal,.eprint,.pdf,.doi,.url,.links,.intro,.notes {
+.title,.authors,.journal,.year,.eprint,.pdf,.doi,.url,.links,.intro,.notes {
     display: inline;
+    padding: 0;
+    margin: 0;
 }
 
 .links {
@@ -142,6 +144,12 @@ sup, sub {
 
 .title{
     font-weight: bold;
+    line-height: .8em;
+    display: inline-block;
+}
+
+.title:first-line{
+    line-height: 1.4em;
 }
 
 .journal{

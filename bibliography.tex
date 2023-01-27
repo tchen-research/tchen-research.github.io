@@ -1,0 +1,47 @@
+\documentclass{article}
+% General document formatting
+\usepackage[parfill]{parskip}
+\usepackage[utf8]{inputenc}
+    
+% Related to math
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+
+\usepackage[
+    backend=biber,
+    style=numeric,
+    sorting=none,
+    doi=false,
+    maxbibnames=99
+]{biblatex}
+
+\bibliography{publications}
+
+
+
+\DeclareFieldFormat{eprint:arxiv}{%
+    \href{https://arxiv.org/abs/#1}{\texttt{[arXiv: #1]}\nopunct}%
+}
+
+\DeclareSourcemap{
+    \maps[datatype=bibtex]{
+      \map{
+        \step[fieldsource=pdf]
+        \step[fieldset=userb,origfieldval]
+    }
+  }
+}
+
+\DeclareFieldFormat{userb}{\href{#1}{\texttt{[pdf]}}}
+\AtEveryBibitem{%
+    \csappto{blx@bbx@\thefield{entrytype}}{% put at end of entry
+    \space\printfield{userb}
+    }
+}
+
+\begin{document}
+\nocite{lanczos_rational_opt}
+
+\nocite{slq_analysis}
+
+
+\end{document}
