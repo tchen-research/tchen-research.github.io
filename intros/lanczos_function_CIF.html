@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <title>Error bounds for Lanczos-based matrix function approximation</title>
+  <meta name="description" content="We provide some new error bounds for the Lanczos methods for computing matrix functions.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="author" content="Tyler Chen" />
+
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <link href="../tc.ico" rel="shortcut icon" >
+  <link href="../css/main.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../css/print.css" rel="stylesheet" type="text/css" media="print"/>
+  <link rel="stylesheet" href="../css/katex.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../font/lato/stylesheet.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../font/vollkorn/stylesheet.css" type="text/css" charset="utf-8" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-50592837-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-50592837-1');
+</script>
+
+</head>
+<body>
+<div id="contentContainer">
+<h1>Error bounds for Lanczos-based matrix function approximation</h1>
+<p class="author"><a href="https://chen.pw">Tyler Chen</a></p>
+<p>This is a companion piece to <a href="https://doi.org/10.1137/21M1427784">https://doi.org/10.1137/21M1427784</a></p>
+<p>Code to replicate the figures in the corresponding paper can be found on <a href="https://github.com/tchen-research/lanczos_function_CIF">Github</a>.</p>
+<p>The Lanczos method for matrix function approximation (<a href="./lanczos-fa.html">Lanczos-FA</a>) can be used to approximate <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi mathvariant="bold">A</mi><mo stretchy="false">)</mo><mi mathvariant="bold">b</mi></mrow><annotation encoding="application/x-tex">f(\mathbf{A})\mathbf{b}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathbf">A</span><span class="mclose">)</span><span class="mord mathbf">b</span></span></span></span> (read more about this task <a href="./fAb.html">here</a>), and in the case that <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn><mi mathvariant="normal">/</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">f(x) = 1/x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1/</span><span class="mord mathnormal">x</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">A</mi></mrow><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">A</span></span></span></span> is positive definite, this approximation is optimal over Krylov subspace.
+This case is very well studied and a range of error bounds and estimates exist.
+However, for other functions, the standard bounds are often too pessimistic as they do not take into account fine grained information about the spectrum of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">A</mi></mrow><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">A</span></span></span></span> such as outlaying or clustered eigenvalues.
+This makes it difficult to know when Lanczos-FA has reached a suitable accuracy for a given problem.</p>
+<p>In this paper we show how to reduce the error of approximating <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi mathvariant="bold">A</mi><mo stretchy="false">)</mo><mi mathvariant="bold">b</mi></mrow><annotation encoding="application/x-tex">f(\mathbf{A})\mathbf{b}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathbf">A</span><span class="mclose">)</span><span class="mord mathbf">b</span></span></span></span> with Lanczos-FA to the error of solving a certain linear system with the Lanczos-FA.
+This allows us to leverage the range of existing bounds for the convergence of Lanczos-FA on linear systems to easily obtain a priori and a posteriori bounds for other matrix functions.
+Our a posteriori bounds are highly accurate and can be used as practical stopping criteria.</p>
+
+
+<div class="menu">
+    <p>
+    <a href="https://chen.pw">home</a>  /  <a href="https://courses.chen.pw">teaching</a>  /  <a href="https://research.chen.pw">research</a>
+    </p>
+</div>
+
+</div>
+</body>
+</html>
