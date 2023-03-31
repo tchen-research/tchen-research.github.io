@@ -49,7 +49,7 @@ Traces of matrix functions are related to the CESM by
 You can read more about applications of these quantities <a href="./fAb.html">here</a>.</p>
 <p>In this paper, we provide a unified perspective of algorithms for <em>randomized matrix-free quadrature</em>.
 Specifically, the class of algorithms we study is characterized by the use of a Krylov subspace method to approximate independent and identically distributed samples of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi mathvariant="bold">v</mi><mi mathvariant="sans-serif">T</mi></msup><mi>f</mi><mo stretchy="false">(</mo><mi mathvariant="bold">A</mi><mo stretchy="false">)</mo><mi mathvariant="bold">v</mi></mrow><annotation encoding="application/x-tex">\mathbf{v}^\mathsf{T}f(\mathbf{A})\mathbf{v}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0991em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathbf" style="margin-right:0.01597em;">v</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathsf mtight">T</span></span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathbf">A</span><span class="mclose">)</span><span class="mord mathbf" style="margin-right:0.01597em;">v</span></span></span></span>, where <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">v</mi></mrow><annotation encoding="application/x-tex">\mathbf{v}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4444em;"></span><span class="mord mathbf" style="margin-right:0.01597em;">v</span></span></span></span> is an isotropic random vector.
-Since many widely used algorithms, such as stochastic Lanczos quadrature (SLQ) and the kernel polynomial method (KPM), fall into this class, our unified perspective allows the algorithms’ tradeoffs to be more clearly understood.</p>
+Since many widely used algorithms, such as stochastic Lanczos quadrature (SLQ) <span class="citation" data-cites="ubaru_chen_saad_17">[<a href="#ref-ubaru_chen_saad_17" role="doc-biblioref">1</a>]</span> and the kernel polynomial method (KPM) <span class="citation" data-cites="weisse_wellein_alvermann_fehske_06">[<a href="#ref-weisse_wellein_alvermann_fehske_06" role="doc-biblioref">2</a>]</span>, fall into this class, our unified perspective allows the algorithms’ tradeoffs to be more clearly understood.</p>
 <p>Define the weighted CESM <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Ψ</mi><mo>:</mo><mi mathvariant="double-struck">R</mi><mo>→</mo><mo stretchy="false">[</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">\Psi : \mathbb{R}\to[0,1]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Ψ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mclose">]</span></span></span></span>, an estimator for the CESM defined by
 <span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi mathvariant="normal">Ψ</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>:</mo><mo>=</mo><msup><mi mathvariant="bold">v</mi><mi mathvariant="sans-serif">T</mi></msup><mi mathvariant="double-struck">I</mi><mo stretchy="false">(</mo><mi mathvariant="bold">A</mi><mo>≤</mo><mi>x</mi><mo stretchy="false">)</mo><mi mathvariant="bold">v</mi><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi mathvariant="normal">∣</mi><msup><mi mathvariant="bold">v</mi><mi mathvariant="sans-serif">T</mi></msup><msub><mi mathvariant="bold">u</mi><mi>i</mi></msub><msup><mi mathvariant="normal">∣</mi><mn>2</mn></msup><mi mathvariant="double-struck">I</mi><mo stretchy="false">(</mo><msub><mi>λ</mi><mi>i</mi></msub><mo>≤</mo><mi>x</mi><mo stretchy="false">)</mo><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">
     \Psi(x) := \mathbf{v}^\mathsf{T}\mathbb{I}(\mathbf{A}\leq x) \mathbf{v}
@@ -95,18 +95,21 @@ Our analysis shows that all algorithms of this form satisfy similar theoretical 
 However there are many practical concerns which separate the algorithms.</p>
 <p>A number of important past works have argued that Lanczos-based approaches are unstable, and therefore should not be used without costly reorthogonalization schemes
 .
-Based on the analysis in <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> , we argue that, even without reorthogonalzation, Lanczos-based approaches tend to outperform approaches based on explicit polynomials.
+Based on the analysis in <span class="citation" data-cites="knizhnerman_96">[<a href="#ref-knizhnerman_96" role="doc-biblioref">3</a>]</span> , we argue that, even without reorthogonalzation, Lanczos-based approaches tend to outperform approaches based on explicit polynomials.
 In fact, we go so far as to argue that explicit polynomial methods such as the kernel polynomial method should typically be implemented using Lanczos.
 The qualitative tradeoffs between the algorithms are further illustrated by our numerical experiments in a wite variety of numerical experiments.</p>
-<section class="footnotes" role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1" role="doc-endnote"><p>L. A. Knizhnerman.
-“The Simple Lanczos Procedure: Estimates of the Error of the Gauss Quadrature Formula and Their Applications”.
-In: <em>Comput. Math. Math. Phys.</em>
-36.11 (Jan. 1996), pp. 1481–1492. issn: 0965-5425.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
+<h2 class="unnumbered">References</h2>
+<div id="refs" class="references" role="doc-bibliography">
+<div id="ref-ubaru_chen_saad_17">
+<p>1. Ubaru, S.; Chen, J.; Saad, Y. Fast Estimation of <span class="math inline">tr (<em>f</em>(<em>A</em>))</span> via Stochastic Lanczos Quadrature. <em>SIAM Journal on Matrix Analysis and Applications</em> <strong>2017</strong>, <em>38</em>, 1075–1099, doi:<a href="https://doi.org/10.1137/16m1104974">10.1137/16m1104974</a>.</p>
+</div>
+<div id="ref-weisse_wellein_alvermann_fehske_06">
+<p>2. Weiße, A.; Wellein, G.; Alvermann, A.; Fehske, H. The Kernel Polynomial Method. <em>Reviews of Modern Physics</em> <strong>2006</strong>, <em>78</em>, 275–306, doi:<a href="https://doi.org/10.1103/revmodphys.78.275">10.1103/revmodphys.78.275</a>.</p>
+</div>
+<div id="ref-knizhnerman_96">
+<p>3. Knizhnerman, L.A. The Simple Lanczos Procedure: Estimates of the Error of the Gauss Quadrature Formula and Their Applications. <em>Comput. Math. Math. Phys.</em> <strong>1996</strong>, <em>36</em>, 1481–1492.</p>
+</div>
+</div>
 
 
 <div class="menu">
