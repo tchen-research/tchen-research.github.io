@@ -11,8 +11,15 @@ body,html {
     font-size: 110%;
 }
 
+
 h1, h2, h3 {
     font-family: 'Lato','Trebuchet MS','Sans-Serif';
+}
+
+#profile {
+    float: left;
+    width: 30%;
+    margin-right: 1em;
 }
 
 #contentContainer {
@@ -171,6 +178,14 @@ sup, sub {
 .footer {
     padding-top: 4em;
     font-size: 80%;
+}
+
+#refs {
+    margin-top: 1em;
+}
+
+#refs p {
+    margin: 0pt;
 }
 
 table {
