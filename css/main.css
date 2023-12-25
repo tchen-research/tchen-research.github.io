@@ -9,7 +9,6 @@ body,html {
     font-feature-settings: 'lnum';
     font-weight: 400;
     font-size: 100%;
-    text-align: justify;
 }
 
 
@@ -168,12 +167,8 @@ sup, sub {
 
 .title{
     font-weight: bold;
-    line-height: .8em;
-    display: inline-block;
-}
-
-.title:first-line{
     line-height: 1.4em;
+    display: inline-block;
 }
 
 .journal{
@@ -220,10 +215,10 @@ caption {
     padding: 0 0 1em 0;
 }
 
-
 @media (min-width:600px) {
     body, html {
         font-size: 110%;
+        text-align: justify;
     }
     #profile {
         height: 11em;
@@ -234,13 +229,6 @@ caption {
     #contentContainer {
         width: 700px;
     }
+    
 }
 
-@media (min-height:1100px) {
-    body, html {
-        font-size: 120%;
-    }
-    #contentContainer{
-        padding-top: 150px;
-    }
-}
