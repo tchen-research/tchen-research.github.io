@@ -1,6 +1,6 @@
 ---
 title:  Tyler Chen
-keywords: ['applied','math','courant','tandon','NYU','research']
+keywords: ['applied','math','Courant','Tandon','NYU','research']
 description: I'm Tyler Chen! This page contains some basic information about my research.
 ...
 
@@ -42,7 +42,6 @@ I'm always interested in finding things to collaborate on (and people to collabo
 
 I believe strongly in the value of undergraduate research and am currently working with a number of undergraduate students on research projects.
 
-- Ismael Jimenez (NYU)  
 - Robert Chen (NYU)  
 - Kevin Li (NYU)  
 - Skai Nzeuton (Stuyvesant, next stop: undergrad at Cornell)  
