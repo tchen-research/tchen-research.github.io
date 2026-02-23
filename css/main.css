@@ -155,7 +155,7 @@ sup, sub {
     padding: 0;
 }
 
-.title,.authors,.journal,.year,.eprint,.pdf,.doi,.url,.links,.intro,.notes {
+.title,.authors,.journal,.year,.eprint,.pdf,.doi,.url,.links,.intro,.notes,.video {
     display: inline;
     padding: 0;
     margin: 0;
