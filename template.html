@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$" xml:lang="$lang$"$if(dir)$ dir="$dir$"$endif$>
 <head>
   <meta charset="utf-8" />
-  <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+  <title>$pagetitle$$if(chineseName)$ | $chineseName$$endif$</title>
   <meta name="description" content="$description$">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 $for(author-meta)$
@@ -47,7 +47,22 @@ $include-before$
 $endfor$
 <div id="contentContainer">
 $if(title)$
+<div id="titleRow">
+<div id="nameRow">
 <h1>$title$</h1>
+$if(chineseName)$<span id="chineseName">$chineseName$</span>$endif$
+</div>
+$if(nameIcons)$
+<div id="titleSubRow">
+<div id="officeInfo">
+NYU Shanghai, Office S754 · <a href="mailto:tyler.chen@nyu.edu">tyler.chen@nyu.edu</a>
+</div>
+<div id="nameIcons">
+  <a href="https://nyu.zoom.us/my/tyler.chen">Zoom</a> · <a href="https://scholar.google.com/citations?hl=en&amp;user=FD4TjnYAAAAJ">Scholar</a> · <a href="$depth$cv.pdf">CV</a> · <a href="https://github.com/tchen-research">GitHub</a>
+</div>
+</div>
+$endif$
+</div>
 $if(subtitle)$
 <p class="subtitle">$subtitle$</p>
 $endif$
