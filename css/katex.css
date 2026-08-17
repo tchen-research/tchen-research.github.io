@@ -3,7 +3,6 @@
 @font-face {
   font-family: 'KaTeX_AMS';
   src: url(../font/katex/KaTeX_AMS-Regular.woff2) format('woff2'), url(../font/katex/KaTeX_AMS-Regular.woff) format('woff'), url(../font/katex/KaTeX_AMS-Regular.ttf) format('truetype');
-  font-weight: normal;
   font-style: normal;
 }
 @font-face {

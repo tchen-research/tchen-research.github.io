@@ -60,6 +60,64 @@ h1 {
     border-bottom: 2px solid #000;
 }
 
+#titleRow {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 .5em 0;
+    padding: 0;
+}
+
+#nameRow {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    border-bottom: 2px solid #000;
+    padding: 0;
+    margin: 0;
+}
+
+#titleRow h1 {
+    border-bottom: none;
+    margin: 0;
+}
+
+#chineseName {
+    font-family: 'Lato', 'Trebuchet MS', 'Sans-Serif';
+    font-size: 150%;
+    font-weight: 700;
+}
+
+#titleSubRow {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: .3em 0 .2em 0;
+    font-family: 'Lato', 'Trebuchet MS', 'Sans-Serif';
+    font-size: 80%;
+    line-height: 1.4;
+}
+
+#officeInfo {
+    padding: 0;
+}
+
+#officeInfo a {
+    text-decoration: none;
+}
+
+#nameIcons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4em;
+    align-items: baseline;
+    padding: 0;
+}
+
+#nameIcons a {
+    text-decoration: none;
+}
+
+
 h2 {
     font-size: 115%;
     margin: 1.5em 0 -.5em 0;
@@ -88,6 +146,7 @@ div {
 
 a {
     text-decoration: underline;
+    text-underline-offset: .2em;
     color: #1e3668;
     font-weight: 400;
     cursor: pointer;
