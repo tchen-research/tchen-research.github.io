@@ -1,5 +1,5 @@
 ---
-title: Reflections on my tenure track jobs search
+title: Reflections on my tenure track jobs search (2023-2024)
 keywords: ['applied','math']
 description: I'm Tyler Chen! This page contains some commentary on my TT job serach.
 ...
